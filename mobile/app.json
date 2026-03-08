@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "ClosetAI",
+    "slug": "closetai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6C3CE1"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.closetai.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ClosetAI needs camera access to scan your clothing items.",
+        "NSPhotoLibraryUsageDescription": "ClosetAI needs photo library access to add clothing items from your photos.",
+        "NSPhotoLibraryAddUsageDescription": "ClosetAI needs permission to save photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6C3CE1"
+      },
+      "package": "com.closetai.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ClosetAI needs camera access to scan your clothing items."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ClosetAI needs photo library access to add clothing items from your photos."
+        }
+      ]
+    ]
+  }
+}
