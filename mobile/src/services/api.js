@@ -9,7 +9,7 @@ const api = axios.create({
   timeout: 30000,
 });
 
-// Response interceptor — normalise errors into a consistent shape
+// Response interceptor — normalize errors into a consistent shape
 api.interceptors.response.use(
   (response) => response,
   (error) => {
