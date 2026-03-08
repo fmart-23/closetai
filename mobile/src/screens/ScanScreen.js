@@ -100,7 +100,8 @@ export default function ScanScreen() {
         name: filename,
         type: `image/${ext === 'jpg' ? 'jpeg' : ext}`,
       });
-      // classify_only=true returns just the classification without saving
+      // Uploads the image, classifies it, and creates a draft item in the DB.
+      // The item name is updated after the user confirms in handleSave().
       const result = await clothingAPI.create(formData);
       setClassification(result);
       setItemName(result.name || capitalize(result.category) || '');
